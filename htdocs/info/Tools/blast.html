@@ -5,24 +5,151 @@
 
 <body>
 
-<p>The BLAST tool compares user-supplied sequences to sequences in the WormBase ParaSite database and returns the best hits.</p>
-
 <ol>
-  <li>
-    To perform a BLAST query, first enter your FASTA or plain sequence in the box or upload a file of sequences. You can submit up to 30 sequences at a time. Select the type of sequence - nucleotide or protein - that you are submitting:
-    
-    <img src="/img/blast_input.png" alt="BLAST input" class="image-expand" style="height:300px;">
-    
-  </li>
-    
-  <li>
-    Now select the database you wish to compare against. This can be all species in WormBase ParaSite, all Nematodes, all Platyhelminthes or a custom list. If you select custom list, a window will appear where you can select a species set:
-  
-  <img src="/img/blast_species_select.png" alt="Species select" class="image-expand" style="height:300px;">
-  
-  You can refine the selected list by checking and unchecking the boxes in the tree view.
-  
-  </li>
+  <li><a href="#toc1">Entering a query sequence</a></li>
+  <li><a href="#toc2">Selecting the species</a></li>
+  <li><a href="#toc3">Selecting the search tool</a></li>
+  <li><a href="#toc4">Recent BLAST tickets</a></li>
+  <li><a href="#toc5">Results</a></li>
+  <li><a href="#toc6">Configuration options</a></li>
+  <li><a href="#toc6">References</a></li>
 </ol>
+
+<p>
+  BLAST is a sequence similarity search tool that can be used for both DNA and proteins. The BLAST tool compares user-supplied sequences to sequences in the WormBase ParaSite database and returns the best hits.
+  </p>
+
+<h2>How to run BLAST</h2>
+
+<h3 id="toc1">1) Entering a query sequence</h3>
+
+<p>Paste in a sequence (the suggested format is FASTA) or upload a sequence as a file. Up to 30 sequences can be added. If inputting multiple species, make sure a header (for example a FASTA header) separates each one.</p>
+
+<p><img src="http://static.ensembl.org/img/help/blast_image1.png" alt=""  /></p>
+
+<h3 id="toc2">2) Selecting the species to search against</h3>
+
+<p>
+  You can perform multiple similarity searches at once by choosing different genomes and adding them to your list of species. The databases available for similarity searches are DNA and protein target databases.
+</p>
+
+<ul>
+
+  <li>Genomic sequence: Repetitve and/or low complexity regions are not masked</li>
+
+  <li>Genomic sequence (hard masked): Genomic sequences have been run through the RepeatMasker program and repetitve and/or low complexity regions have been masked as Ns</li>
+
+  <li>cDNAs (transcripts/splice variant)</li>
+
+  <li>Proteins</li>
+
+</ul>
+
+<h3 id="toc3">3) Selecting the search tool</h3>
+
+<p>The following options are available:</p>
+
+<ul>
+ 
+  <li>BLASTN: nucleotide sequences against nucleotide databases</li>
+  <li>TBLASTX: translated nucleotide sequences against a translated nucleotide database</li>
+
+</ul>
+
+<p><strong>Pre-Configured Sets</strong></p>
+
+<p>For BLAST searches, you can change the 'Search Sensitivity' from normal to the following:</p>
+
+<ul>
+
+  <li>Near match (to find closer matches- more stringent settings than 'normal')</li>
+  <li>Short sequences (for short sequences like primers: BLASTN only)</li>
+  <li>Distant homologies (to allow lower-scoring pairs to pass through)</li>
+  
+</ul>
+
+<p>Specific parameters for these configurations can be found by expanding the <a href="#toc6">Configuration options</a>. Alternatively, change the configuration options to customise your own BLAST search.</p>
+
+<p><strong>Running the job</strong></p>
+
+<p>
+  You can give a name or description to this BLAST or BLAT search in the Description (optional) field.</p>
+  
+<p>
+  Once your parameters are set, click RUN to start the search.
+</p>
+
+<h3 id="toc4">4) Recent BLAST tickets</h3>
+
+<p>
+  The table lists jobs that are currently running or recently completed. A ticket ID is assigned to each job and additional information is provided i.e. Analysis, Jobs and Submitted at (date and time). You can customise the table by showing/hiding columns.
+</p>
+
+<p>The progression of the job gets automatically refreshed every 10 seconds until the job is fully completed.</p>
+
+<p>You can view the results by clicking on the ticket number or on the link View results.</p>
+
+<p><img src="http://static.ensembl.org/img/help/blast_image2.png" alt=""  /></p>
+
+<h3 id="toc5">5) Results</h3>
+
+<h4>The results are displayed in three different sections:</h4>
+
+<h4>A) Job details</h4>
+
+<p>
+  Details of the job include job name, species, search type (e.g. BLAT), sequence, query and database types and configuration settings.
+  </p>
+
+<p>Click on the title or (-) to collaspe the Job details section.</p>
+
+<h4>B) Results table</h4>
+
+<p>It can be viewed on the page or downloaded as a file.</p>
+
+<p><img src="http://static.ensembl.org/img/help/results_table_blast.png" alt=""  /></p>
+
+<p>
+  This table lists all hits in order of high to low score (and E-value) but it can be customised to show/hide columns. The results can be sorted by any parameters available in the table.
+  </p>
+
+<p>Hover over the links provided in the results table and click on them to get:</p>
+
+<ul>
+
+  <li>Genomic location: shows the BLAST hit on the Region in detail view in the Location tab of the Genome Browser. The BLAST hit will appear as a red bar along the genome. You may want to click on the red bar to view a summary of the search, including E-Value, %ID, etc.
+
+<p><img src="/img/blast_region_in_detail.png" alt="BLAST" class="image-expand" style="height:300px;"></p>
+
+  </li>
+  
+  <li>Sequence: shows the genomic sequence or query sequence</li>
+
+  <li>Alignment: shows the BLAST alignment</li>
+
+</ul>
+
+<p>Click on the title or (-) to collaspe the Results table.</p>
+
+<h3 id="toc6">6) Configuration Options</h3>
+
+<h4>General options</h4>
+
+<h5>A) Maximum number of hits to report:</h5>
+
+<p>Number of database hits that are displayed. The actual number of alignments may be greater than this. It varies from 10 to 5000 to 100000 and the default is 100.</p>
+
+<h4>B) Culling limit</span></h4>
+
+<p>
+  This option is available for BLAST searches only, not BLAT. It varies from 1 to 999 and the default is 5. The limit will delete a hit that in enveloped by at least this many higher scoring hits.
+  </p>
+  
+<h4>C) E-value threshold:</h4>
+
+<p>
+  Threshold below which results are reported. It varies from 1e-200 to 1000 and the default value is 10.
+  </p>
+
 </body>
 </html>
