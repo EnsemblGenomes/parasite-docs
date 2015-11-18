@@ -5,7 +5,7 @@
 
 <body>
   
-<h2>BLAST</h2>
+<h2>Running BLAST searches</h2>
 
 <ol>
   <li><a href="#toc1">Entering a query sequence</a></li>
@@ -20,36 +20,39 @@
   BLAST is a sequence similarity search tool that can be used for both DNA and proteins. The BLAST tool compares user-supplied sequences to sequences in the WormBase ParaSite database and returns the best hits.
   </p>
 
-<h2>How to run BLAST</h2>
-
-<h3 id="toc1">1) Entering a query sequence</h3>
+<p><h3 id="toc1">1) Entering a query sequence</h3></p>
 
 <p>Paste in a sequence (the suggested format is FASTA) or upload a sequence as a file. Up to 30 sequences can be added. If inputting multiple species, make sure a header (for example a FASTA header) separates each one.</p>
 
-<p><img src="http://static.ensembl.org/img/help/blast_image1.png" alt=""  /></p>
+<p><img src="/img/blast_input.png" alt="BLAST add sequence" class="image-expand" style="height:300px;"></p>
 
-<h3 id="toc2">2) Selecting the species to search against</h3>
+<p><h3 id="toc2">2) Selecting the species to search against</h3></p>
 
 <p>
-  You can perform multiple similarity searches at once by choosing different genomes and adding them to your list of species. The databases available for similarity searches are DNA and protein target databases.
+  You can choose to perform the BLAST search against all genomes in ParaSite, all Nematoda, all Platyhelminthes or a custom set of species. Selecting 'Custom species list' brings up a window where you can select your species within a taxonomic tree:
 </p>
+
+<p><img src="/img/blast_species_select.png" alt="BLAST select" class="image-expand" style="height:300px;"></p>
+
+<p>DNA and protein databases available for similarity searches. When searching against the DNA database you can choose:</p>
 
 <ul>
 
   <li>Genomic sequence:
-    <p>Repetitve and/or low complexity regions are not masked
+    <p>Where repetitve and/or low complexity regions are NOT masked
     </p>
   </li>
 
-  <li>Genomic sequence (hard masked): Genomic sequences have been run through the RepeatMasker program and repetitve and/or low complexity regions have been masked as Ns</li>
+  <li>Genomic sequence (hard masked):
+  <p>Where genomic sequences have been run through the RepeatMasker program and repetitve and/or low complexity regions have been masked as Ns
+  </p>
+  </li>
 
   <li>cDNAs (transcripts/splice variant)</li>
 
-  <li>Proteins</li>
-
 </ul>
 
-<h3 id="toc3">3) Selecting the search tool</h3>
+<p><h3 id="toc3">3) Selecting the search tool</h3></p>
 
 <p>The following options are available:</p>
 
@@ -59,8 +62,6 @@
   <li>TBLASTX: translated nucleotide sequences against a translated nucleotide database</li>
 
 </ul>
-
-<p><strong>Pre-Configured Sets</strong></p>
 
 <p>For BLAST searches, you can change the 'Search Sensitivity' from normal to the following:</p>
 
@@ -72,52 +73,60 @@
   
 </ul>
 
-<p>Specific parameters for these configurations can be found by expanding the <a href="#toc6">Configuration options</a>. Alternatively, change the configuration options to customise your own BLAST search.</p>
-
-<p><strong>Running the job</strong></p>
+<p>
+  Specific parameters for these configurations can be found by expanding the <a href="#toc6">Configuration options</a>. Alternatively, change the configuration options to customise your own BLAST search.
+  </p>
 
 <p>
-  You can give a name or description to this BLAST or BLAT search in the Description (optional) field.</p>
+  You can give an optional description to this search in the Description field.
+  </p>
   
 <p>
   Once your parameters are set, click RUN to start the search.
 </p>
 
-<h3 id="toc4">4) Recent BLAST tickets</h3>
+<p><h3 id="toc4">4) Recent BLAST tickets</h3></p>
 
 <p>
-  The table lists jobs that are currently running or recently completed. A ticket ID is assigned to each job and additional information is provided i.e. Analysis, Jobs and Submitted at (date and time). You can customise the table by showing/hiding columns.
+  The table lists tickets that are currently running or recently completed. You can customise the table by showing/hiding column.
 </p>
 
-<p>The progression of the job gets automatically refreshed every 10 seconds until the job is fully completed.</p>
-
-<p>You can view the results by clicking on the ticket number or on the link View results.</p>
-
-<p><img src="http://static.ensembl.org/img/help/blast_image2.png" alt=""  /></p>
-
-<h3 id="toc5">5) Results</h3>
-
-<h4>The results are displayed in three different sections:</h4>
-
-<h4>A) Job details</h4>
-
 <p>
-  Details of the job include job name, species, search type (e.g. BLAT), sequence, query and database types and configuration settings.
+  The progression of the ticket gets automatically refreshed every 10 seconds until fully completed.
   </p>
 
-<p>Click on the title or (-) to collaspe the Job details section.</p>
-
-<h4>B) Results table</h4>
-
-<p>It can be viewed on the page or downloaded as a file.</p>
-
-<p><img src="http://static.ensembl.org/img/help/results_table_blast.png" alt=""  /></p>
+<p>The icons on the right can be used to download the results of a ticket, edit and resubmit the ticket, share the ticket via URL or delete the ticket.</p>
 
 <p>
-  This table lists all hits in order of high to low score (and E-value) but it can be customised to show/hide columns. The results can be sorted by any parameters available in the table.
+  Click the View results link to see the results.
   </p>
 
-<p>Hover over the links provided in the results table and click on them to get:</p>
+<p><img src="/img/blast_results.png" alt="BLAST results" class="image-expand" style="height:300px;"></p>
+
+<p><h3 id="toc5">5) Results</h3></p>
+
+<p>The results are displayed in two sections:</p>
+
+<ul>
+  <li>Job details:
+    <p>
+    Details of the job include job name, search type (e.g. BLASTN), date and time the job was submitted and configuration settings.
+    </p>
+
+    <p>
+    Click on the title or (-) to collaspe the Job details section.
+    </p>
+  
+  </li>
+
+  <li>
+    Results table:
+    
+    <p>
+  The table lists all hits in order of high to low score (and E-value) and can be customised to show/hide columns. The results can be sorted by any parameters available in the table.
+    </p>
+
+  <p>Follow the links in the results table to get:</p>
 
 <ul>
 
@@ -133,9 +142,16 @@
 
 </ul>
 
+</li>
+
+</ul>
+
+
+
 <p>Click on the title or (-) to collaspe the Results table.</p>
 
-<h3 id="toc6">6) Configuration Options</h3>
+
+<p><h3 id="toc6">6) Configuration Options</h3></p>
 
 
 <h4>General options</h4>
