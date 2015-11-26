@@ -6,43 +6,38 @@
 
 <body>
 
-<h1>Adding Track Hubs to Ensembl</h1>
+<h1>Adding Track Hubs to WormBase ParaSite</h1>
 
-<p>You can add a track hub (also known as a datahub) to Region in Detail for any species, as follows:  
+<p>TrackHubs are web-accessible directories of genomic data that can be viewed in genome browsers. See the <a href="https://genome.ucsc.edu/goldenPath/help/hgTrackHubHelp.html">UCSC website</a> for more information on TrackHubs and how to create your own.</p>
+
+<p>You can add a TrackHub to any <strong>Region in Detail</strong> page for any ParaSite species, as follows:  
 </p> 
 
 <ol>
-<li>Click on the "Add your data" icon <img src="/i/16/page-user.png" /> in the image toolbar or the lefthand button menu
+<li>Click on <strong>Add your data</strong> in the lefthand menu.
   <ul>
-    <li>N.B. If you already have custom data attached, the button will say "Manage your data", in which case you need to click on the "Add your data" link once the control panel has opened.
+    <li>Note: If you already have custom data attached, the button will say <strong>Manage your data<\strong>, in which case you need to click on the <strong>Add your data</strong> link once the control panel has opened.
     </li>
   </ul>
 </li>
 <li>Fill in the data form:
   <ol>
     <li>Give your track hub a name (optional - it will be parsed from the hub.txt file)</li>
-    <li>The current species will be preselected - note that we now support multispecies hubs, so relevant data will be available on all appropriate species</li>
-    <li>The assembly is automatically set to the current assembly for the species you are on - if you wish to use a track hub with data on older assemblies, you will need to use an <a href="/info/website/archives/">archive site</a> (not available for all Ensembl-powered websites)</li>
+    <li>The current species will be preselected - note that we support multispecies TrackHubs, so relevant data will be available on all appropriate species</li>
     <li>Select "TrackHub" from the dropdown menu, and a text box will appear.</li>
   </ol>
 </li>
-<li>Type/paste the <strong>full URL of your hub's <kbd>hub.txt</kbd> file</strong>, e.g. http://ftp.ebi.ac.uk/pub/databases/blueprint/releases/current_release/homo_sapiens/hub/hub.txt</li>
-<li>When your hub has finished loading, a "Configure your hub" link will appear - click on it to see the configuration options for your tracks:
-<img src="/img/datahub_config.png" alt="[screenshot]" class="screenshot" />
+<li>Enter the <strong>full URL of your hub's <kbd>hub.txt</kbd> file</strong>, e.g. http://ftp.ebi.ac.uk/pub/databases/wormbase/releases/current-development-release/COMPARATIVE_ANALYSIS/hub/hub.txt</li> and hit <strong>Attach</strong>.
+
+<li>When your hub has finished loading you should get a message telling you your TrackHub has been loaded successfully. The tracks are now displayed automatically, to view them "Configure your hub" link will appear - click on it to see the configuration options for your tracks:
+
+<p><img src="/img/adding_data_2.png" alt="Adding data" class="image-expand" style="height:300px;"></p>
+
 </li>
 </ol>
 
-<ul>
-<li><a href="/info/website/public_trackhubs.html">List of currently available public track hubs</a></li>
-</ul>
-
-<p>For how to set up a hub, see the documentation provided by UCSC, the originators
-of this data service:</p>
-<ul>
-<li><a href="http://genome.ucsc.edu/goldenPath/help/hgTrackHubHelp.html" rel="external">Using UCSC Genome Browser Track Hubs</a></li>
-<li><a href="http://hgwdev-tdreszer.cse.ucsc.edu/goldenPath/help/trackDb/trackDbHub.html" rel="external">Hub Track Database Definition</a></li>
-</ul>
-
+<p>Select your TrackHub listed in the lefthand menu. Individual tracks can be turned on and off in the configuration interface. When the window is closed the selected tracks will be displayed.
+</p>
 
 </body>
 </html>
