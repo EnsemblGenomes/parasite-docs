@@ -1,3 +1,9 @@
 #Ignore automatically created Mac files
 
 ._*
+
+#Ignore backup files
+
+~*
+
+*~
