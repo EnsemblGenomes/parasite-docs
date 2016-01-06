@@ -27,14 +27,14 @@ The following filters are available:
 <ul>
   <li><strong>SPECIES:</strong> Use this filter to select either individual genomes or particular nematode clades. Multiple genomes can be selected by holding down ctrl or the option key on a Mac.</li>
   <li><strong>REGION:</strong> Restrict to a particular genomic region. Note that this filter should only be used where a single genome has been selected, as it is possibile that a particular region is present in multiple genomes.
-  <p>If start/end co-ordinates are being specified, a scaffold or chromosome id is also required.</p>
+  <p>If start/end co-ordinates are being specified, a scaffold or chromosome id is always required.</p>
   <p>Where multiple regions are specified, the format is Scaffold/Chr:Start:End:Strand e.g. <a href="http://goo.gl/uusiH6">AG00032:411187:446321:1</a>. If no strand is specified, both strands are selected. Regions should be separated by a comma or new line.</p></li>
-  <li><strong></strong></li>
-  <li><strong></strong></li>
-  <li><strong></strong></li>
-  <li><strong></strong></li>
-  <li><strong></strong></li>
-  <li><strong></strong></li>
+  <li><strong>GENE:</strong> Specify a list of genes with WormBase IDs, or one of the other ID types listed. IDs should be separated by a new line.</li>
+  <li><strong>GENE ONTOLOGY:</strong> Restrict by one or more Gene Ontology (GO) terms for functional descriptions. Paste or upload a list of GO IDs or use the autocomplete box to populate the list. 
+  <p>Alternatively, you can restrict to a particular GO evidence type e.g. Inferred by Electronic Annotation (IEA). For a explanation of GO evidence codes see the <a href="http://geneontology.org/page/guide-go-evidence-codes">GO website</a>. Multiple codes can be selected by holding down the ctrl key, or option key on a Mac.</p> </li>
+  <li><strong>MULTI-SPECIES COMPARISONS: </strong>Restrict to orthologs or paralogs for a species by choosing from the pulldown list. You can choose to ONLY include that ortholog/paralog set or to EXCLUDE that set from your query by using the checkboxes. </li>
+  <li><strong>PROTEIN DOMAINS:</strong> Allows you to restrict your query based on the presence or absence of protein domains. <strong>Limit to genes...</strong>lets you choose a particular domain set in include or exclude e.g. "resgtrict to all proteins containing any protein feature found in Pfam".
+  <p>The second options allows you to restrict to one or more protein domains/families. Accepts IDs from several databases including InterPRO, Pfam and Panther. IDs should be separated by a new line.</p></li>
 </ul>
 
 </body>
