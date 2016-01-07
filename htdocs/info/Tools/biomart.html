@@ -86,19 +86,45 @@
 
 <p><img src="/img/biomart_7.png" alt="BioMart" class="image-expand" style="width:400px;"></p>
 
+<p>Output is a FASTA file where additional information can be given in the header lines. The sequences themsleves can be formed using the following options:</p>
+
 <ul>
+  <li><strong>Unspliced (Transcript)</strong></li>
+  <p>Full transcript sequence, exons and introns. For genes with multiple transcripts, all transcript sequences are returned. </p>
+
   <li><strong>Unspliced (Gene)</strong></li>
-  <p>Blah blah nnnnnn nnnnnn nnnnnnn nnnnnnnnn nnnnn</p>
-  <li>Flank (Transcript)</li>
- Flank (Gene)
- Flank-coding region (Transcript)
- Flank-coding region (Gene)
- 5' UTR
- 3' UTR
- Exon sequences
- cDNA sequences
- Coding sequence
- Peptide
+  <p>Full gene sequence, exons and introns. </p>
+
+  <li><strong>Flank (Transcript)</li></strong></li>
+  <p>Sequence adjacent to a transcript. <strong>Upstream flank</strong> or <strong>Downstream flank</strong> needs to be specifed in the panel below, along with the length of the flanking sequence required in base pairs. For genes with multiple transcripts, all transcript flanking sequences are returned.</p>
+  
+ <li><strong>Flank (Gene)</strong></li>
+ <p>Sequence adjacent to a gene. <strong>Upstream flank</strong> or <strong>Downstream flank</strong> needs to be specifed in the panel below, along with the length of the flanking sequence required in base pairs.</p>
+ 
+ <li><strong>Flank-coding region (Transcript)</strong></li>
+ <p>Flanking sequence for a transcript + 5' UTR sequence for upstream flank and 3' UTR sequence for downstream flank. <strong>Upstream flank</strong> or <strong>Downstream flank</strong> needs to be specifed in the panel below, along with the length of the flanking sequence required in base pairs. For genes with multiple transcripts, all transcript sequences are returned.</p>
+ 
+ <li><strong>Flank-coding region (Gene)</strong></li>
+ <p>Flanking sequence for a transcript + 5' UTR sequence for upstream flank and 3' UTR sequence for downstream flank. <strong>Upstream flank</strong> or <strong>Downstream flank</strong> needs to be specifed in the panel below, along with the length of the flanking sequence required in base pairs. For genes with multiple transcripts, all transcript sequences are returned.</p>
+ 
+ <li><strong>5' UTR</strong></li>
+ <p>Sequence of the 5' untranslated region. Note that this sequence is only retrievable if the 5' UTR has been annotated for the gene(s) in question.</p>
+ 
+ <li><strong>3' UTR</strong></li>
+ <p>Sequence of the 3' untranslated region. Note that this sequence is only retrievable if the 3' UTR has been annotated for the gene(s) in question.</p>
+ 
+ <li><strong>Exon sequences</strong></li>
+ <p>returns all exonic (coding) sequences. Each exon is returned as a separate sequence with its own header. Check 'Exon ID' in the Header section to get sequential numbering of exons within the gene/transcript.</p>
+
+<li><strong>cDNA sequences</strong></li></strong></li>
+<p>All coding sequence including 5' and 3' UTRs.</p>
+
+<li><strong>Coding sequence</strong></li>
+<p>All coding sequence excluding 5' and 3' UTRs.</p>
+
+<li><strong>Peptide</strong></li>
+<p>Protein translation of the coding sequences. For genes with multiple transcripts, all transcript peptide sequences are returned.</p>
+ 
  </ul>
  
 </ol>
