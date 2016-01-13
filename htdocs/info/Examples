@@ -12,13 +12,14 @@
 
 <p>See the <a href="/info/Browsing/Upload/index.html#formats">Supported file formats</a> section for more information on what format these files should be in.</p>
 
-<p>To add the data go to your region of interest for your species:</p>
+<p>To add the data go to your region of interest for your species, <a href="http://parasite.wormbase.org/Trichuris_muris_prjeb126/Location/View?db=core;g=TMUE_s0016004100;r=scaffold16:252493-273266;t=TMUE_s0016004100;time=1439908569187.187">for example</a>.
+</p>
 
-http://parasite.wormbase.org/Trichuris_muris_prjeb126/Location/View?db=core;g=TMUE_s0016004100;r=scaffold16:252493-273266;t=TMUE_s0016004100;time=1439908569187.187
+<p>In the left panel, click ‘Add your data’.</p>
 
-In the left panel, click ‘Add your data’.
+<p>In the ‘Data format’ pulldown, choose the correct format, in this case <a href="/info/Browsing/Upload/wig.html">BigWig</a>, and add the URL to your data, e.g.:</p>
 
-In the ‘Data format’ pulldown, choose the correct format, in this case BigWig, and add the URL to your data:
+
 
 http://www.ebi.ac.uk/~jane/ERS092077.bw
 http://www.ebi.ac.uk/~jane/ERS092078.bw
