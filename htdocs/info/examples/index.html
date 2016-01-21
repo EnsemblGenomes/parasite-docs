@@ -124,7 +124,22 @@
 
 </ul>
 
+<li><span style="font-weight: bold">I need a list of genes with predicted signal peptide that are present in <i>Brugia malayi</i>a given organism but not present in <i>C. elegans</i>.</span></li>
 </ol>
+
+<ul>
+
+<li>You can do that using <a href="/biomart/martview/">BioMart</a>. In the SPECIES section choose <i>Brugia malayi</i>, then in the MULTI-SPECIES COMPARISONS select <strong>Orthologous C. elegans genes -> Excluded</strong>.
+  </li>
+  
+  <li>In the PROTEIN DOMAINS section check <strong>Limit to genes...</strong> and from the menu select <strong>with signal P protein features -> Only</strong></li>
+
+<p><img src="/img/examples_5.png" alt="Examples" class="image-expand" style="width:400px;"></p>
+
+<li>Click the <strong>Results</strong> button, top left, to see your results. By default a two-column file is returned that contains gene ID and Genome Project. To configure different options for the output, select <strong>Attributes</strong> in the left menu. See the <a href="/info/Tools/biomart.html#toc2">help documentation</a> for more information.
+  </li>
+
+  </ul>
 
 </body>
 </html>
