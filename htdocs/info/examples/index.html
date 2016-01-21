@@ -67,6 +67,7 @@
 
 <li><p><span style="font-weight: bold">I have a list of genes from <i>Ascaris suum</i> and would like to know which ones have orthologs in humans and mammals and which ones might be nematode-specific:</p></span>
 
+<p>
 <table>
 <tr><td>ASU_00012</td></tr>
 <tr><td>ASU_00034</td></tr>
@@ -78,35 +79,46 @@
 <tr><td>ASU_01289</td></tr>
 <tr><td>ASU_03421</td></tr>
 </table>
+</p>
 
 <ul>
 
 <li>You can do that using <a href="/biomart/martview/">BioMart</a>. In the GENE menu paste in your list, then in the MULTI-SPECIES COMPARISONS select <strong>Orthologous human genes -> Excluded</strong>.
+  </li>
 
-<p>You can also run this query against against mouse orthologs by selecting <strong>Orthologous mouse genes -> Excluded</strong>. The results are the same in this case.</p>
-</li>
+<p><img src="/img/examples_2.png" alt="Examples" class="image-expand" style="width:400px;"></p>
+
+<li><p>You can also run this query against against mouse orthologs by selecting <strong>Orthologous mouse genes -> Excluded</strong>. The results are the same in this case.</p>
+  </li>
 
 <li>Click the <strong>Results</strong> button, top left, to see your results. By default a two-column file is returned that contains gene ID and Genome Project. To configure different options for the output, select <strong>Attributes</strong> in the left menu. See the <a href="/info/Tools/biomart.html#toc2">help documentation</a> for more information.
-</li>
+  </li>
 
-</ul>
+  </ul>
 
 </li>
 
 <li><span style="font-weight: bold">I need the sequences for a set of <i>Schistosoma mansoni</i> genes. I have the chromosome, start, and stop for each:</span></li>
 
+<p>
 <table>
   <tr><td>Smp.Chr_3:5955668:5958652:1</td></tr>
   <tr><td>Smp.SC_0395:8998:9186:1</td></tr>
   <tr><td>Smp.Chr_1:32692191:32693861:1</td></tr>
   <tr><td>Smp.Chr_3:26054871:26055183:-1</td></tr>
 </table>
+</p>
 
 <ul>
   
-A: From the SPECIES filter choose S. mansoni, then under REGION enter the co-ordinates under 'Multiple regions'.
+<li>From the SPECIES filter choose <i>Schistosoma mansoni</i>. Open the REGION section and enter the list of co-ordinates under 'Multiple regions'. The list can be separated by commas or new lines.
+</li>
 
-In 'Attributes' select 'Sequences' Unspliced (genes) and hit results.
+<p><img src="/img/examples_3.png" alt="Examples" class="image-expand" style="width:400px;"></p>
+
+<li>Click the <strong>Attributes</strong> option from the left menu. Check the <strong>Sequences</strong> option, then in the SEQUENCES section choose <strong>Unspliced (genes)</strong>. Click the <strong>Results</strong> button, top left.</li>
+
+<p><img src="/img/examples_4.png" alt="Examples" class="image-expand" style="width:400px;"></p>
 
 </li>
 
