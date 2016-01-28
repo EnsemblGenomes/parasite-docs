@@ -41,12 +41,12 @@
 
 <ul>
   <li><strong>SPECIES:</strong> Use this filter to select either individual genomes or nematode clades. Multiple genomes can be selected by holding down the ctrl key or the option key on a Mac.</li>
-  <li><strong>REGION:</strong> Restrict to a particular genomic region. Note that this filter should only be used where a single genome has been selected, as it is possibile that a particular region is present in multiple genomes.
+  <li><strong>REGION:</strong> Restrict to a particular genomic region. Note that this filter should only be used where a single genome has been selected, as it is possible that a particular region is present in multiple genomes.
   <p>If start/end co-ordinates are being specified, a scaffold or chromosome id is always required.</p>
   <p>Where multiple regions are specified, the format is 'Scaffold/Chr:Start:End:Strand' e.g. <a href="http://goo.gl/uusiH6">AG00032:411187:446321:1</a>. If no strand is specified, both strands are selected. Regions should be separated by a comma or new line.</p></li>
   <li><strong>GENE:</strong> Specify a list of genes with WormBase IDs, or one of the other ID types listed. IDs should be separated by a new line.</li>
   <li><strong>GENE ONTOLOGY:</strong> Restrict by one or more Gene Ontology (GO) terms for functional descriptions. Paste or upload a list of GO IDs or use the autocomplete box to populate the list. 
-  <p>Alternatively, you can restrict to a particular GO evidence type e.g. Inferred by Electronic Annotation (IEA). For a explanation of GO evidence codes see the <a href="http://geneontology.org/page/guide-go-evidence-codes">GO website</a>. Multiple codes can be selected by holding down the ctrl key, or option key on a Mac.</p> </li>
+  <p>Alternatively, you can restrict to a particular GO evidence type e.g. Inferred by Electronic Annotation (IEA). For an explanation of GO evidence codes see the <a href="http://geneontology.org/page/guide-go-evidence-codes">GO website</a>. Multiple codes can be selected by holding down the ctrl key, or option key on a Mac.</p> </li>
   <li><strong>MULTI-SPECIES COMPARISONS: </strong>Restrict to orthologs or paralogs for a species by choosing from the pulldown list. You can choose to ONLY include that ortholog/paralog set or to EXCLUDE that set from your query by using the checkboxes. </li>
   <li><strong>PROTEIN DOMAINS:</strong> Allows you to restrict your query based on the presence or absence of protein domains. 
   <p><strong>Limit to genes...</strong>lets you choose a particular database feature set in include or exclude e.g. "restrict to all proteins containing any feature found in Pfam".</p>
@@ -99,7 +99,7 @@
 
 <p><img src="/img/biomart_7.png" alt="BioMart" class="image-expand" style="width:400px;"></p>
 
-<p>Output is a FASTA file where additional information can be given in the header lines. The sequences themsleves can be generated using the following configurations. Only one option can be selected at a time.</p>
+<p>Output is a FASTA file where additional information can be given in the header lines. The sequences themselves can be generated using the following configurations. Only one option can be selected at a time.</p>
 
 <ul>
   <li><strong>Unspliced (Transcript)</strong></li>
@@ -109,16 +109,16 @@
   <p>Full gene sequence, exons and introns. </p>
 
   <li><strong>Flank (Transcript)</li></strong></li>
-  <p>Sequence adjacent to a transcript. <strong>Upstream flank</strong> or <strong>Downstream flank</strong> needs to be specifed in the panel below, along with the length of the flanking sequence required in base pairs. For genes with multiple transcripts, all transcript flanking sequences are returned.</p>
+  <p>Sequence adjacent to a transcript. <strong>Upstream flank</strong> or <strong>Downstream flank</strong> needs to be specified in the panel below, along with the length of the flanking sequence required in base pairs. For genes with multiple transcripts, all transcript flanking sequences are returned.</p>
   
  <li><strong>Flank (Gene)</strong></li>
- <p>Sequence adjacent to a gene. <strong>Upstream flank</strong> or <strong>Downstream flank</strong> needs to be specifed in the panel below, along with the length of the flanking sequence required in base pairs.</p>
+ <p>Sequence adjacent to a gene. <strong>Upstream flank</strong> or <strong>Downstream flank</strong> needs to be specified in the panel below, along with the length of the flanking sequence required in base pairs.</p>
  
  <li><strong>Flank-coding region (Transcript)</strong></li>
- <p>Flanking sequence for a transcript + 5' UTR sequence for upstream flank and 3' UTR sequence for downstream flank. <strong>Upstream flank</strong> or <strong>Downstream flank</strong> needs to be specifed in the panel below, along with the length of the flanking sequence required in base pairs. For genes with multiple transcripts, all transcript sequences are returned.</p>
+ <p>Flanking sequence for a transcript + 5' UTR sequence for upstream flank and 3' UTR sequence for downstream flank. <strong>Upstream flank</strong> or <strong>Downstream flank</strong> needs to be specified in the panel below, along with the length of the flanking sequence required in base pairs. For genes with multiple transcripts, all transcript sequences are returned.</p>
  
  <li><strong>Flank-coding region (Gene)</strong></li>
- <p>Flanking sequence for a transcript + 5' UTR sequence for upstream flank and 3' UTR sequence for downstream flank. <strong>Upstream flank</strong> or <strong>Downstream flank</strong> needs to be specifed in the panel below, along with the length of the flanking sequence required in base pairs. For genes with multiple transcripts, all transcript sequences are returned.</p>
+ <p>Flanking sequence for a transcript + 5' UTR sequence for upstream flank and 3' UTR sequence for downstream flank. <strong>Upstream flank</strong> or <strong>Downstream flank</strong> needs to be specified in the panel below, along with the length of the flanking sequence required in base pairs. For genes with multiple transcripts, all transcript sequences are returned.</p>
  
  <li><strong>5' UTR</strong></li>
  <p>Sequence of the 5' untranslated region. Note that this sequence is only retrievable if the 5' UTR has been annotated for the gene(s) in question.</p>
@@ -158,7 +158,7 @@
 
 <p>Results are displayed on the page by default as a simple HTML table, and can also be shown as CSV (comma-separated values) or TSV (tab-separated values). For sequences the display format is FASTA.</p>
 
-<p>For larger data sets the results can be exported as a file using the options at the top of the page. Export formats are HTML, CSV (comma-separated values), TSV (tab-separated values) and Excel (XLS). Sequences are exported as FASTA. For very large files, compressed formats are also available in the first pulldown menu.</p>
+<p>For larger datasets the results can be exported as a file using the options at the top of the page. Export formats are HTML, CSV (comma-separated values), TSV (tab-separated values) and Excel (XLS). Sequences are exported as FASTA. For very large files, compressed formats are also available in the first pulldown menu.</p>
 
 <p><h3 id="toc8">4) Example Queries</h3></p>
 
