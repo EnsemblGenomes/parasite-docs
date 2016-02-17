@@ -16,6 +16,7 @@
     <li><a href="#toc7">Sequences output</a></li>
   </ul>
   <li><a href="#toc3">Downloading your Output</a></li>
+  <li><a href="#toc8">Accessing data using R</a></li>
 </ol>
 
 
@@ -154,15 +155,53 @@
 
 <p>BioMart results can be viewed and downloaded from the results page.</p>
 
-[insert img of results page]
-
 <p>Results are displayed on the page by default as a simple HTML table, and can also be shown as CSV (comma-separated values) or TSV (tab-separated values). For sequences the display format is FASTA.</p>
 
 <p>For larger datasets the results can be exported as a file using the options at the top of the page. Export formats are HTML, CSV (comma-separated values), TSV (tab-separated values) and Excel (XLS). Sequences are exported as FASTA. For very large files, compressed formats are also available in the first pulldown menu.</p>
 
-<p><h3 id="toc8">4) Example Queries</h3></p>
+<p><h3 id="toc8">4) Accessing data using R</h3></p>
 
-<p>Some real biological queries are shown ***</p>
+<p>The WormBase ParaSite BioMart fully supports the biomaRt package for R.</p>
+
+<p>
+  Install the biomaRt package:
+  <pre>
+    source("http://bioconductor.org/biocLite.R")
+    biocLite("biomaRt")</pre>
+</p>
+
+<p>
+  Initialise biomaRt
+  <pre>
+    library(biomaRt)</pre>
+</p>
+
+<p>
+  Establish a connection to the WormBase ParaSite BioMart
+  <pre>
+    mart <- useMart("parasite_mart", dataset = "wbps_eg_gene", host = "parasite.wormbase.org")</pre>
+</p>
+
+<p>
+  List the available filters and attributes
+  <pre>
+    listFilters(mart)
+    listAttributes(mart)</pre>
+</p>
+
+<p>
+  An example: get all the S. mansoni genes with a C. elegans orthologue
+  <pre>
+    library(biomaRt)
+    mart <- useMart("parasite_mart", dataset = "wbps_eg_gene", host = "parasite.wormbase.org")
+    genes <- getBM(mart = mart, 
+                   filters = c("species_id_1010", "with_celegans_eg_homologue"),
+                   value = list("prjea36577", TRUE),
+                   attributes = c("ensembl_gene_id", "celegans_eg_gene"))
+    head(genes)</pre>
+</p>
+
+<p>Tip: to replicate a query constructed in the web browser, click the "XML" button.  From here, you can see the relevant filter and attribute names required to construct the same query in biomaRt.</p>
 
 </body>
 </html>
