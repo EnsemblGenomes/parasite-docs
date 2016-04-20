@@ -10,9 +10,7 @@
   <li><a href="#toc1">Setting your Filters</a></li>
   <li><a href="#toc2">Setting your Attributes (outputs)</a></li>
   <ul>
-    <li><a href="#toc4">Features output</a></li>
-    <li><a href="#toc5">Structures output</a></li>
-    <li><a href="#toc6">Homologs output</a></li>
+    <li><a href="#toc4">Creating a data table output</a></li>
     <li><a href="#toc7">Sequences output</a></li>
   </ul>
   <li><a href="#toc3">Downloading your Output</a></li>
@@ -48,7 +46,7 @@
   <li><strong>GENE:</strong> Specify a list of genes with WormBase IDs, or one of the other ID types listed. IDs should be separated by a new line.</li>
   <li><strong>GENE ONTOLOGY:</strong> Restrict by one or more Gene Ontology (GO) terms for functional descriptions. Paste or upload a list of GO IDs or use the autocomplete box to populate the list. 
   <p>Alternatively, you can restrict to a particular GO evidence type e.g. Inferred by Electronic Annotation (IEA). For an explanation of GO evidence codes see the <a href="http://geneontology.org/page/guide-go-evidence-codes">GO website</a>. Multiple codes can be selected by holding down the ctrl key, or option key on a Mac.</p> </li>
-  <li><strong>MULTI-SPECIES COMPARISONS: </strong>Restrict to orthologs or paralogs for a species by choosing from the pulldown list. You can choose to ONLY include that ortholog/paralog set or to EXCLUDE that set from your query by using the checkboxes. </li>
+  <li><strong>HOMOLOGY: </strong>Restrict to orthologs or paralogs for a species by choosing from the pulldown list. You can choose to include (WITH) that ortholog/paralog set or to exclude (WITHOUT) that set from your query by using the checkboxes. </li>
   <li><strong>PROTEIN DOMAINS:</strong> Allows you to restrict your query based on the presence or absence of protein domains. 
   <p><strong>Limit to genes...</strong>lets you choose a particular database feature set in include or exclude e.g. "restrict to all proteins containing any feature found in Pfam".</p>
   <p>The second option, <strong>Limit to genes with these family or domain IDs:</strong>, allows you to restrict to one or more protein domains/families. Accepts IDs from several databases including InterPRO, Pfam and Panther. IDs should be separated by a new line.</p></li>
@@ -64,7 +62,7 @@
 
 <ol>
   
-  <li><h4 id="toc4">Features output</h4></li>
+  <li><h4 id="toc4">Create a data table</h4></li>
 
 <p><img src="/img/biomart_4.png" alt="BioMart" class="image-expand" style="width:400px;"></p>
 
@@ -80,17 +78,9 @@
 
 <p><strong>Protein domain</strong> adds columns for protein attributes such as InterPro domains and descriptions.</p>
   
-  <li><h4 id="toc5"><strong>Structures output</strong></h4></li>
-  
-  <p><img src="/img/biomart_5.png" alt="BioMart" class="image-expand" style="width:400px;"></p>
-  
-  <p>In additional to Gene and Species attributes, this gives you output options for the exon structure of the gene such as CDS start and end and exon rank within the cDNA.</p>
+<p><strong>Exons</strong> in addition to Gene and Species attributes, this gives you output options for the exon structure of the gene such as CDS start and end and exon rank within the cDNA.</p>
 
-  <li><h4 id="toc6"><strong>Homologues output</strong></h4></li>
-  
-  <p><img src="/img/biomart_6.png" alt="BioMart" class="image-expand" style="width:400px;"></p>
-
-<p>Gives the option of exporting orthologs or homologs from one or more chosen species for a set of input genes. For example "given me all <i>C. elegans</i> orthologs for the <i>B. malayi</i> genes eat-3, eat-4 and eat-6, eat-16 and eat-20".</p>
+<p><strong>Homologues</strong> gives the option of exporting orthologs or homologs from one or more chosen species for a set of input genes. For example "given me all <i>C. elegans</i> orthologs for the <i>B. malayi</i> genes eat-3, eat-4 and eat-6, eat-16 and eat-20".</p>
 
 <p>As well as the core Gene and Species attributes, additional output options include ortholog gene and protein IDs, chromosome/scaffold ID, orthology confidence and % identity.</p>
 
