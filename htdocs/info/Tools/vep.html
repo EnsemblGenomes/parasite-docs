@@ -223,41 +223,29 @@ job, along with some basic statistics about the results. </p>
 
 <h3>Pie charts</h3>
 
-<div class="column-wrapper">
-    <div class="column-two">
-        <div class="column-left">
             <p> Pie charts are shown detailing the proportion of consequence
             types called across all variants in the results. The colour scheme
             of the pie chart matches the colours used to draw variants on the
             Ensembl region in detail view. </p>
-        </div>
-    </div>
-      
-    <div class="column-two">
-      <div class="column-right" style="padding-left:2em">
-          <img src="/img/vep_web_pie1.png">
-      </div>
-    </div>
-</div>
+
+<p><img src="/img/vep_web_pie1.png" alt="VEP pie chart" class="image-expand" style="width:400px;"></p>
 
 <hr/>
 
 <h2 id="table">Results preview table</h2>
 
-<div class="column-wrapper">
-    <div class="column-two">
-        <div class="column-left">
             <p> The results table shows one row per transcript and variant. By
             default all of the columns are shown; to temporarily hide columns,
             click the blue "Show/hide columns" button and select or deselect the
             columns you wish to view. The columns you select will be recalled
             when viewing other jobs.</p>
+
             <p> Hover over a column title to see a description. See the <a
-            href="/info/docs/tools/vep/vep_formats.html#output">VEP output
-            format documentation</a> for more details on each of the results
-            columns. </p>
+            href="http://www.ensembl.org/info/docs/tools/vep/vep_formats.html#output">Ensembl VEP documentation</a> for more details on each of the results columns. </p>
+
             <p> The table can be sorted by any column - click the column header
             to toggle sorting behaviour.</p>
+
             <p> To download what you see in the table, hover over the
             spreadsheet icon in the top right corner of the table.</p> <p>
             Several columns have special features for the data they contain:
@@ -271,66 +259,42 @@ job, along with some basic statistics about the results. </p>
                     <li><b>Consequence</b> - hover over the consequence name to
                     see the <a href="http://www.sequenceontology.org/"
                     rel="external">Sequence Ontology</a> definition. See the <a
-                    href="/info/genome/variation/predicted_data.html#consequences">Ensembl
+                    href="http://www.ensembl.org/info/genome/variation/predicted_data.html#consequences">Ensembl
                     Variation documentation</a> for a full list of consequence
                     types used by the VEP and their definitions</li>
                 </ul>
             </p>
-        </div>
-    </div>
-      
-    <div class="column-two">
-      <div class="column-right" style="padding-left:2em">
-          <img src="/img/vep_web_table.png">
-      </div>
-    </div>
-</div>
-
 <hr/>
 
 <h2 id="nav">Navigating results</h2>
 
-<div class="column-wrapper">
-    <div class="column-two">
-        <div class="column-left">
             <p> The navigation panel can be used to scroll through pages of
-            results.</p> <p> By default, the results for five variants are
+            results.</p>
+            <p> By default, the results for five variants are
             shown. Note that since a variant can overlap multiple transcripts,
             the table will often show <b>more than</b> five rows. To change the
             number shown, click the appropriate link. Be warned that if your
             input file is large, it is inadvisable to show all results unless
             you are sure you have applied sufficient filters - your browser may
             become unresponsive if it tries to display many thousands of rows in
-            the table.</p> <p> To navigate between pages of results, use the
+            the table.</p>
+            <p> To navigate between pages of results, use the
             four arrow icons. Note that when any filters are enabled, it is not
             possible to navigate to the last page of results as the total
-            number of results cannot be calculated. </p> </p>
-        </div>
-    </div>
-      
-    <div class="column-two">
-      <div class="column-right" style="padding-left:2em">
-          <img src="/img/vep_web_nav.png">
-      </div>
-    </div>
-</div>
-
+            number of results cannot be calculated. </p>
 <hr/>
 
 <h2 id="filter">Filtering results</h2>
 
-<div class="column-wrapper">
-    <div class="column-two">
-        <div class="column-left">
             <p> You can apply any combination of filters to your results in
-            order to identify interesting data. This is equivalent to using the
-            <a href="/info/docs/tools/vep/script/vep_filter.html">VEP filtering
-            script</a> on the command line.</p> <p> To add a filter, simply
+            order to identify interesting data.</p>
+            <p> To add a filter, simply
             select the column you wish to filter on, select an
             &quot;operator&quot;, and input a value for the filter to compare
-            to. </p> <p> To edit a filter, click the pencil icon <img
-            src="/i/16/pencil-whitebg.png">. To remove a filter, click the cross
-            icon <img src="/i/close.png">.</p> <p> When you have added more than
+            to. </p> 
+            <p> To edit a filter, click the pencil icon. To remove a filter, click the cross
+            icon.</p> 
+            <p> When you have added more than
             one filter, you are given the option to match any or all of the
             rules shown; click the &quot;Update&quot; button once you have made
             your selection. </p> <p>Certain columns when selected have special
