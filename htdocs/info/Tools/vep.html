@@ -8,7 +8,7 @@
 <h1>Variant Effect Predictor (VEP)</h1>
 
 <p>
-The VEP determines the effect of your variants (SNPs, insertions,
+The <a href="http://parasite.wormbase.org/Multi/Tools/VEP">Variant Effect Predictor (VEP)</a> determines the effect of your variants (SNPs, insertions,
 deletions, CNVs or structural variants) on genes, transcripts, and
 protein sequence, as well as regulatory regions through a simple point-and-click interface. Simply input the
 coordinates of your variants and the nucleotide changes to find out the:</p>
@@ -17,7 +17,6 @@ coordinates of your variants and the nucleotide changes to find out the:</p>
 <li><b>location</b> of the variants (e.g. upstream of a transcript, in coding sequence, in non-coding RNA, in regulatory regions)</li>
 <li><b>consequence</b> of your variants on the protein sequence (e.g. stop gained, missense, stop lost, frameshift)</li>
 <li><b>known variants</b> that match yours</li>
-<li><b>SIFT</b> and <b>PolyPhen</b> scores for changes to protein sequence</li>
 </ul>
 
 <p> If you use the VEP in your work, please cite <b>McLaren et. al.</b> (<a href="http://www.ncbi.nlm.nih.gov/pubmed/20562413"
@@ -53,16 +52,14 @@ enter your data and alter various options.</p>
                   input for future jobs by choosing the data from the drop down
                   menu.</p>
                   
-                  <p> The format of your data is automatically detected; see the
-                  examples or the <a href="../vep_formats.html#input">input
-                  format</a> documentation. </p>
+                  <p> The format of your data is automatically detected. </p>
               </li>
               
               <li> For pasted data you can get an instant preview of the results of your
               first variant by clicking the button that appears when you paste
               your data. This quickly shows you the consequence type, the IDs of
               any overlapping variants, genes, transcripts and regulatory
-              features, as well as SIFT and PolyPhen predictions. To see the full
+              features. To see the full
               results set submit your job as normal. </li>
           </ol>
 
@@ -73,26 +70,18 @@ enter your data and alter various options.</p>
             
             <ul>
                 <li> <b>Gene symbol</b> - add the gene symbol for the gene to
-                the output. This will typically be, for example, the <a
-                href="http://www.genenames.org/" rel="external">HGNC</a>
-                identifier for genes in human. Equivalent to <a
-                href="/info/docs/tools/vep/script/vep_options.html#opt_symbol">--symbol</a>
-                in the VEP script.</li>
+                the output.</li>
                 
-                <li> <b>CCDS</b> - add the <a
-                href="/info/genome/genebuild/ccds.html">Consensus CDS</a>
-                transcript identifier where available. Equivalent to <a
-                href="/info/docs/tools/vep/script/vep_options.html#opt_ccds">--ccds</a></li>
+                <li> <b>CCDS</b> - add the Consensus CDS
+                transcript identifier where available.</li>
                 
-                <li> <b>Protein</b> - add the Ensembl protein identifer (ENSP).
-                Equivalent to <a
-                href="/info/docs/tools/vep/script/vep_options.html#opt_protein">--protein</a></li>
+                <li> <b>Protein</b> - add the WormBase ParaSite protein identifer.
+                </li>
                 
-                <li> <B>Uniprot</B> - add identifiers for translated protein
+                <li> <b>Uniprot</b> - add identifiers for translated protein
                 products from three <a href="http://www.ebi.ac.uk/uniprot"
                 rel="external">UniProt</a>-related databases (SWISSPROT, TREMBL
-                and UniParc). Equivalent to <a
-                href="/info/docs/tools/vep/script/vep_options.html#opt_uniprot">--uniprot</a></li>
+                and UniParc).</li>
                 
                 
 <h2 id="extra"> Extra options </h2>
