@@ -7,23 +7,7 @@
           
 <h1>Variant Effect Predictor (VEP)</h1>
 
-<ol>
-  <li><a href="#input">Data input</a></li>
-  <ul>
-  <li><a href="#ident">Identifiers</a></li>
-  <li><a href="#extra">Extra options</a></li>
-  <li><a href="#filter">Filtering options</a></li>
-  <li><a href="#jobs">Jobs</a></li>
-  </ul>
-  <li><a href="#results">Results</a></li>
-  <ul>
-  <li><a href="#summary">Summary</a></li>
-  <li><a href="#table">Results preview table</a></li>
-  <li><a href="#nav">Navigating results</a></li>
-  <li><a href="#filter">Filtering results</a></li>
-  <li><a href="#download">Downloading results</a></li>
-  </ul>
-</ol>
+
 
 <p>
 The <a href="http://parasite.wormbase.org/Multi/Tools/VEP">Variant Effect Predictor (VEP)</a> determines the effect of your variants (SNPs, insertions,
@@ -41,6 +25,24 @@ coordinates of your variants and the nucleotide changes to find out the:</p>
 
 <p> If you use the VEP in your work, please cite <b>McLaren et. al.</b> (<a href="http://www.ncbi.nlm.nih.gov/pubmed/20562413"
 rel="external">doi:10.1093/bioinformatics/btq330</a>) </p>
+
+<ol>
+  <li><a href="#input">Data input</a></li>
+  <ul>
+  <li><a href="#ident">Identifiers</a></li>
+  <li><a href="#extra">Extra options</a></li>
+  <li><a href="#filter">Filtering options</a></li>
+  <li><a href="#jobs">Jobs</a></li>
+  </ul>
+  <li><a href="#results">Results</a></li>
+  <ul>
+  <li><a href="#summary">Summary</a></li>
+  <li><a href="#table">Results preview table</a></li>
+  <li><a href="#nav">Navigating results</a></li>
+  <li><a href="#filter">Filtering results</a></li>
+  <li><a href="#download">Downloading results</a></li>
+  </ul>
+</ol>
 
 <h1 id="input">Data input </h1>
 
@@ -282,12 +284,12 @@ job, along with some basic statistics about the results. </p>
                     types used by the VEP and their definitions</li>
                 </ul>
             </p>
-<hr/>
 
 <h2 id="nav">Navigating results</h2>
 
             <p> The navigation panel can be used to scroll through pages of
             results.</p>
+            
             <p> By default, the results for five variants are
             shown. Note that since a variant can overlap multiple transcripts,
             the table will often show <b>more than</b> five rows. To change the
@@ -296,6 +298,7 @@ job, along with some basic statistics about the results. </p>
             you are sure you have applied sufficient filters - your browser may
             become unresponsive if it tries to display many thousands of rows in
             the table.</p>
+            
             <p> To navigate between pages of results, use the
             four arrow icons. Note that when any filters are enabled, it is not
             possible to navigate to the last page of results as the total
@@ -325,19 +328,20 @@ job, along with some basic statistics about the results. </p>
                     <li><p><b>Location</b> - for this column you may enter
                     genomic coordinates in the format
                     &quot;chromosome:start-end&quot;.</p>
-                    <p>Adding multiple
+                    <ul>
+                    <li><p>Adding multiple
                     location filters allows you to select multiple regions -
                     location filters are not affected by whether you select
                     &quot;Match all&quot; or &quot;Match any&quot; (see
-                    above).</p>
-                    <p>Users should note that enabling at least one
+                    above).</p></li>
+                    <li><p>Users should note that enabling at least one
                     location filter will greatly speed up the return of results
                     (this is because <a
                     href="http://samtools.sourceforge.net/tabix.shtml"
                     rel="external">tabix</a> is used behind the
-                    scenes).</p>
-                    <p> Location filters are not affected by the
-                    operator selected. </p></li>
+                    scenes).</p></li>
+                    <li><p> Location filters are not affected by the
+                    operator selected. </p></ul></li></li>
                     <li><b>Allele, Feature type, Consequence and
                     Biotype</b> - for these columns, autocomplete will help you
                     fill in the value when you start typing</li>
@@ -350,12 +354,12 @@ job, along with some basic statistics about the results. </p>
             <p> The VEP allows you to download either your full or filtered
             results set in a choice of data formats. </p>
             <ul>
-                <li><b>VCF</b> - <a href="../vep_formats.html#vcfout">VCF</a> is
+                <li><b>VCF</b> - <a href="http://www.ensembl.org/info/docs/tools/vep/vep_formats.html#vcfout">VCF</a> is
                 a portable format for variant data. Consequence data is encoded
                 as a series of delimited strings under the &quot;CSQ&quot; key
                 in the VCF INFO field.</li>
                 <li><b>VEP</b> - The default <a
-                href="../vep_formats.html#output">VEP output format</a> gives
+                href="http://www.ensembl.org/info/docs/tools/vep/vep_formats.html#output">VEP output format</a> gives
                 one row per variant and transcript overlap.</li>
                 <li><b>TXT</b> - Text format is a tab-delimited format,
                 equivalent to what can be seen in the results table. Note that
