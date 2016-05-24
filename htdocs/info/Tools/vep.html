@@ -1,0 +1,380 @@
+
+<html>
+<head>
+<title>VEP</title>
+</head>
+<body>
+          
+<h1>Variant Effect Predictor (VEP)</h1>
+
+
+
+<p>
+The <a href="http://parasite.wormbase.org/Multi/Tools/VEP">Variant Effect Predictor (VEP)</a> determines the effect of your variants (SNPs, insertions,
+deletions, CNVs or structural variants) on genes, transcripts, and
+protein sequence, as well as regulatory regions through a simple point-and-click interface. Simply input the
+coordinates of your variants and the nucleotide changes to find out the:</p>
+<ul>
+<li><b>genes</b> and <b>transcripts</b> affected by the variants</li>
+<li><b>location</b> of the variants (e.g. upstream of a transcript, in coding sequence, in non-coding RNA, in regulatory regions)</li>
+<li><b>consequence</b> of your variants on the protein sequence (e.g. stop gained, missense, stop lost, frameshift)</li>
+<li><b>known variants</b> that match yours</li>
+</ul>
+
+<p>The WormBase VEP is built using Ensembl technology. For a more detailed description of the VEP tool, see the <a href="http://www.ensembl.org/info/docs/tools/vep/index.html">Ensembl documentation</a>.</p>
+
+<p> If you use the VEP in your work, please cite <b>McLaren et. al.</b> (<a href="http://www.ncbi.nlm.nih.gov/pubmed/20562413"
+rel="external">doi:10.1093/bioinformatics/btq330</a>) </p>
+
+<ol>
+  <li><a href="#input">Data input</a></li>
+  <ul>
+  <li><a href="#ident">Identifiers</a></li>
+  <li><a href="#extra">Extra options</a></li>
+  <li><a href="#filter">Filtering options</a></li>
+  <li><a href="#jobs">Jobs</a></li>
+  </ul>
+  <li><a href="#results">Results</a></li>
+  <ul>
+  <li><a href="#summary">Summary</a></li>
+  <li><a href="#table">Results preview table</a></li>
+  <li><a href="#nav">Navigating results</a></li>
+  <li><a href="#filter">Filtering results</a></li>
+  <li><a href="#download">Downloading results</a></li>
+  </ul>
+</ol>
+
+<h1 id="input">Data input </h1>
+
+<p> When you reach the VEP web interface, you will be presented with a form to
+enter your data and alter various options.</p>
+
+<p><img src="/img/vep_1.png" alt="VEP" class="image-expand" style="width:400px;"></p>
+
+          <ol>
+              <li> First select the correct species for your data. Start typing into the box to get an autocomplete list of species</li>
+              
+              <li> You can optionally choose a name for the data you upload -
+              this can make it easier for you to identify jobs and files that
+              you have uploaded to the VEP at a later point. </li>
+              
+              <li> <p>You have three options for uploading your data:
+                  
+                  <ul>
+                      <li><b>File upload</b> - click the "Choose file" button
+                      and locate the file on your system</li>
+                      <li><b>Paste file</b> - simply copy and paste the contents
+                      of your file into the large text box</li>
+                      <li><b>File URL</b> - point the VEP to a file hosted on a
+                      publically accessible address. This can be either a
+                      <b>http://</b> or <b>ftp://</b> address.</li>
+                  </ul>
+                  
+                  Once you have uploaded some data, you can select it as the
+                  input for future jobs by choosing the data from the drop down
+                  menu.</p>
+                  
+                  <p> The format of your data is automatically detected. For a description of the accepted input formats see the <a href="http://www.ensembl.org/info/docs/tools/vep/vep_formats.html#input">Ensembl VEP documentation</a>.</p>
+              </li>
+              
+              <li> For pasted data you can get an instant preview of the results of your
+              first variant by clicking the button that appears when you paste
+              your data. This quickly shows you the consequence type, the IDs of
+              any overlapping variants, genes, transcripts and regulatory
+              features. To see the full
+              results set submit your job as normal. </li>
+          </ol>
+
+<h2 id="ident">Identifiers</h2>
+
+            <p>The VEP can provide additional identifiers for genes, transcripts,
+            proteins and variants.</p>
+            
+            <ul>
+                <li> <b>Gene symbol</b> - add the gene symbol for the gene to
+                the output.</li>
+                
+                <li> <b>CCDS</b> - add the Consensus CDS
+                transcript identifier where available.</li>
+                
+                <li> <b>Protein</b> - add the WormBase ParaSite protein identifer.
+                </li>
+                
+                <li> <b>Uniprot</b> - add identifiers for translated protein
+                products from three <a href="http://www.ebi.ac.uk/uniprot"
+                rel="external">UniProt</a>-related databases (SWISSPROT, TREMBL
+                and UniParc).</li>
+          </ul>
+                
+<h2 id="extra">Extra options </h2>
+
+            <ul>
+                <li> <b>Transcript biotype</b> - add the transcript biotype to the output.
+                </li>
+                
+                <li> <b>Protein domains</b> - report protein domains from <a
+                href="http://pfam.xfam.org/" rel="external">Pfam</a>, <a
+                href="http://prosite.expasy.org/" rel="external">Prosite</a> and
+                <a href="http://www.ebi.ac.uk/interpro/"
+                rel="external">InterPro</a> that overlap input variants.
+                </li>
+                
+                <li> <b>Exon and intron numbers</b> - report the exon or intron
+                number that a variant falls in as NUMBER / TOTAL, i.e. exon 2/5
+                means the variant falls in the 2nd of 5 exons in the transcript.
+                </li>
+                
+                <li> <b>Transcript support level</b> - report the transcript support level of the overlapped
+                transcript.</li>
+                
+                <li><b>APPRIS</b> - <a rel="external"
+                href="http://appris.bioinfo.cnio.es/">APPRIS</a> is a system to annotate alternatively spliced transcripts based on a range of computational methods.</li>
+                
+                <li> <b>Identify canonical transcripts</b> - adds a flag to the
+                output indicating if the reported transcript is the canonical transcript for the
+                gene.</li>
+          </ul>
+
+<h2 id="filter">Filtering options </h2>
+
+            <p>The VEP allows you to pre-filter your results. Note that it is also possible to perform
+            equivalent operations on the results page for the VEP.</p> 
+            
+            <ul>
+                
+                <li> <b>Return results for variants in coding regions only</b> -
+                exclude variants that don't fall in a coding region of a
+                transcript. </li>
+                
+                <li> <b>Restrict results</b> - for many variants the VEP will
+                report multiple consequence types - typically this is because
+                the variant overlaps more than one transcript. For each of these
+                options the VEP uses consequence ranks that are subjectively
+                determined by Ensembl. Note that enabling one of these
+                options not only loses potentially relevant data, but in some
+                cases may be scientifically misleading. Options:
+                    
+                    <ul>
+                    
+                        <li><b>Show one selected consequence</b> - pick one
+                        consequence type across all those predicted for the
+                        variant; the output will include transcript- or
+                        feature-specific information. Consequences are chosen by
+                        the canonical, biotype status and length of the
+                        transcript, along with the ranking of the consequence
+                        type according to <a
+                        href="/info/genome/variation/predicted_data.html#consequence_type_table">this
+                        table</a>. This is the best method to use if you are
+                        interested only in one consequence per variant.
+                        </li>
+                        
+                        <li><b>Show one selected consequence per gene</b> - pick
+                        one consequence type for each gene using the same
+                        criteria as above. Note that if a variant overlaps more
+                        than one gene, output for each gene will be reported.
+                        </li>
+                        
+                        <li><b>Show only list of consequences per variant</b> -
+                        give a comma-separated list of all observed consequence
+                        types for each variant. No transcript-specific or
+                        gene-specific output will be given.</li>
+                        
+                        <li><b>Show most severe per variant</b> - only the most
+                        severe of all observed consequence types is reported for
+                        each variant. No transcript-specific or gene-specific
+                        output will be given.</li>
+                    </ul>
+                </li>
+            </ul>
+
+<h2 id="jobs">Jobs </h2>
+
+          <p>Once you have clicked &quot;Run&quot;, your input will be checked
+          and submitted to the VEP as a job. All jobs associated with your
+          session or account are shown in the &quot;Recent Tickets&quot; table.
+          You may submit multiple jobs simultaneously.</p> <p>The
+          &quot;Jobs&quot; column of the table shows the current status of the
+          job.</p>
+
+          <ul>
+            <li><b>Queued</b> - your job is waiting to be submitted to the
+            system</li>
+            <li><b>Running</b> - your job is currently running</li>
+            <li><b>Done</b> - your job is finished - click the [View results]
+            link to be taken to the results page</li>
+            <li><b>Failed</b> - there is a
+            problem with your job - click the magnifying glass icon to see more details</li>
+          </ul>
+
+          <p>You may delete a job by clicking the trash can icon. If you are logged in to your account, you can save
+          the job by clicking the save icon.</p>
+          
+          <p> You may also resubmit a job (for example, to re-run with the same
+          data but change some parameters) by clicking the edit icon.</p>
+
+          <p> You can see a summary of the options that you selected for your
+          VEP job by clicking on the magnifying glass icon.</p>
+ 
+<hr/>
+ 
+<h1 id="results">Results </h1>
+    
+<p> The VEP presents a <a href="#summary">summary</a> and a detailed <a
+href="#table">results preview</a> on its results page. </p>
+
+<h2 id="summary">Summary</h2>
+
+<p> The summary panel on the VEP results page gives a brief overview of the VEP
+job, along with some basic statistics about the results. </p>
+
+<h3>Statistics</h3>
+
+            <p> Various statistics are listed in a table, including:
+                <ul>
+                    <li>Variants processed - any variants
+                    not parsed by the VEP are not included in this count</li>
+                    <li>Variants remaining after <a
+                    href="input.html#filter">filtering</a></li> <li>Novel /
+                    known variants - the number and percentage of novel variants
+                    vs existing variants in the input (see <a
+                    href="input.html#ident">input page documentation</a>)</li>
+                    <li>Number of overlapped genes, transcripts and regulatory
+                    features</li>
+                </ul>
+            </p>
+
+<h3>Pie charts</h3>
+
+            <p> Pie charts are shown detailing the proportion of consequence
+            types called across all variants in the results. The colour scheme
+            of the pie chart matches the colours used to draw variants on the
+            Ensembl region in detail view. </p>
+
+<p><img src="/img/vep_web_pie1.png" alt="VEP pie chart" class="image-expand" style="width:400px;"></p>
+
+<h2 id="table">Results preview table</h2>
+
+            <p> The results table shows one row per transcript and variant. By
+            default all of the columns are shown; to temporarily hide columns,
+            click the blue "Show/hide columns" button and select or deselect the
+            columns you wish to view. The columns you select will be recalled
+            when viewing other jobs.</p>
+
+            <p> Hover over a column title to see a description. See the <a
+            href="http://www.ensembl.org/info/docs/tools/vep/vep_formats.html#output">Ensembl VEP documentation</a> for more details on each of the results columns. </p>
+
+            <p> The table can be sorted by any column - click the column header
+            to toggle sorting behaviour.</p>
+
+            <p> To download what you see in the table, hover over the
+            spreadsheet icon in the top right corner of the table.</p> <p>
+            Several columns have special features for the data they contain:
+                <ul>
+                    <li><b>Location</b> - click the link to navigate to the
+                    region in detail view for the region surrounding this
+                    variant</li> <li><b>Gene, Feature and Existing Variation</b>
+                    - click the link to bring up a summary view of the gene,
+                    transcript, regulatory feature or variation, from which you
+                    can navigate to the main Ensembl page for it</li>
+                    <li><b>Consequence</b> - hover over the consequence name to
+                    see the <a href="http://www.sequenceontology.org/"
+                    rel="external">Sequence Ontology</a> definition. See the <a
+                    href="http://www.ensembl.org/info/genome/variation/predicted_data.html#consequences">Ensembl
+                    Variation documentation</a> for a full list of consequence
+                    types used by the VEP and their definitions</li>
+                </ul>
+            </p>
+
+<h2 id="nav">Navigating results</h2>
+
+            <p> The navigation panel can be used to scroll through pages of
+            results.</p>
+            
+            <p> By default, the results for five variants are
+            shown. Note that since a variant can overlap multiple transcripts,
+            the table will often show <b>more than</b> five rows. To change the
+            number shown, click the appropriate link. Be warned that if your
+            input file is large, it is inadvisable to show all results unless
+            you are sure you have applied sufficient filters - your browser may
+            become unresponsive if it tries to display many thousands of rows in
+            the table.</p>
+            
+            <p> To navigate between pages of results, use the
+            four arrow icons. Note that when any filters are enabled, it is not
+            possible to navigate to the last page of results as the total
+            number of results cannot be calculated. </p>
+
+<h2 id="filter">Filtering results</h2>
+
+            <p> You can apply any combination of filters to your results in
+            order to identify interesting data.</p>
+     
+            <p> To add a filter, simply
+            select the column you wish to filter on, select an
+            &quot;operator&quot;, and input a value for the filter to compare
+            to. </p> 
+   
+            <p> To edit a filter, click the pencil icon. To remove a filter, click the cross
+            icon.</p> 
+  
+            <p> When you have added more than
+            one filter, you are given the option to match any or all of the
+            rules shown; click the &quot;Update&quot; button once you have made
+            your selection. </p>
+            
+            <p>Certain columns when selected have special
+            features:
+                <ul>
+                    <li><p><b>Location</b> - for this column you may enter
+                    genomic coordinates in the format
+                    &quot;chromosome:start-end&quot;.</p>
+                    <ul>
+                    <li><p>Adding multiple
+                    location filters allows you to select multiple regions -
+                    location filters are not affected by whether you select
+                    &quot;Match all&quot; or &quot;Match any&quot; (see
+                    above).</p></li>
+                    <li><p>Users should note that enabling at least one
+                    location filter will greatly speed up the return of results
+                    (this is because <a
+                    href="http://samtools.sourceforge.net/tabix.shtml"
+                    rel="external">tabix</a> is used behind the
+                    scenes).</p></li>
+                    <li><p> Location filters are not affected by the
+                    operator selected. </p></ul></li></li>
+                    <li><b>Allele, Feature type, Consequence and
+                    Biotype</b> - for these columns, autocomplete will help you
+                    fill in the value when you start typing</li>
+                </ul>
+            </p>
+     
+
+<h2 id="download">Downloading results</h2>
+
+            <p> The VEP allows you to download either your full or filtered
+            results set in a choice of data formats. </p>
+            <ul>
+                <li><b>VCF</b> - <a href="http://www.ensembl.org/info/docs/tools/vep/vep_formats.html#vcfout">VCF</a> is
+                a portable format for variant data. Consequence data is encoded
+                as a series of delimited strings under the &quot;CSQ&quot; key
+                in the VCF INFO field.</li>
+                <li><b>VEP</b> - The default <a
+                href="http://www.ensembl.org/info/docs/tools/vep/vep_formats.html#output">VEP output format</a> gives
+                one row per variant and transcript overlap.</li>
+                <li><b>TXT</b> - Text format is a tab-delimited format,
+                equivalent to what can be seen in the results table. Note that
+                the columns you select to be visible in the table do not affect
+                the downloaded file - all columns are outputted. This format is
+                best if you intend to import the results into a spreadsheet
+                program such as Microsoft Excel.</li>
+            </ul>
+            
+            <p> You can also send the genes or known variants in your current
+            preview to BioMart. This allows you to easily retrieve any of
+            BioMart's rich data associated with these genes (other database
+            references, GO terms, orthologues/paralogues) and variants
+            (phenotype annotations, synonyms, citations). </p>
+
+
+</body>
+</html>
