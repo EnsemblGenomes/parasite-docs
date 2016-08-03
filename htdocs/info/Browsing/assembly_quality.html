@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Assembly Statistics Widget</title>
+</head>
+
+<body>
+
+  <h1>Assembly Statistics</h1>
+
+  <img src="/img/assembly_widget.png" alt="Assembly statistics widget" class="image-expand" />
+
+  <h2>Scaffold Statistics Widget</h2>
+  <p>The circumference of the widget represents the full length of the genome, from 0% to 100%, with the scaffolds sorted into descending order based on length.  The radius of the silver area represents the scaffold length at this point in the descending list.  The length of the longest scaffold within the assembly is shown in orange.</p>
+  <p>Dark green = N50 length.  This is length of the smallest contig such as the sum of the sequences larger than this contig covers half of the genome assembly.</p>
+  <p>Light green = N90 length.  This is length of the smallest contig such as the sum of the sequences larger than this contig covering 90% of the genome assembly.</p>
+  <p>Hovering over the widget will reveal the N-value at this point.  For example, hovering over 30% will display the N30 value.</p>
+  <p>The exterior of the circle shows the AT:GC:N content ratio within each scaffold at that point of the genome.</p>
+  <h2>CEGMA Piechart</h2>
+  <p>CEGMA is a method of measuring assembly quality developed by the Korf Lab at UC Davis.  It involves looking for a set of highly conserved genes present in most eukaryotes in the genome assembly.  The more of these proteins are completely (or at least partially) retrieved in the assembly, the higher its quality.</p>
+  <h2>BUSCO Piechart</h2>
+  <p>BUSCO is a method of measuring assembly quality developed at the University of Geneva.  In the genome assembly, we look for single-copy orthologues that are present in more than 90% of animals.  The percentages of complete, duplicated and fragmented genes recovered are reported.</p>
+
+</body>
+</html>
