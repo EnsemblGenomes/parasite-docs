@@ -186,7 +186,7 @@
     mart <- useMart("parasite_mart", dataset = "wbps_gene", host = "parasite.wormbase.org")
     genes <- getBM(mart = mart, 
                    filters = c("species_id_1010", "only_elegaprjna13758_homologue"),
-                   value = list("prjea36577", TRUE),
+                   value = list("mansoprjea36577", TRUE),
                    attributes = c("wbps_gene_id", "elegaprjna13758_gene", "elegaprjna13758_gene_name"))
     head(genes)</pre>
 </p>
