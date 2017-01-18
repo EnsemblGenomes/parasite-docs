@@ -169,7 +169,7 @@
 <p>
   Establish a connection to the WormBase ParaSite BioMart
   <pre>
-    mart <- useMart("parasite_mart", dataset = "wbps_eg_gene", host = "parasite.wormbase.org")</pre>
+    mart <- useMart("parasite_mart", dataset = "wbps_gene", host = "parasite.wormbase.org")</pre>
 </p>
 
 <p>
@@ -183,11 +183,11 @@
   An example: get all the S. mansoni genes with a C. elegans orthologue
   <pre>
     library(biomaRt)
-    mart <- useMart("parasite_mart", dataset = "wbps_eg_gene", host = "parasite.wormbase.org")
+    mart <- useMart("parasite_mart", dataset = "wbps_gene", host = "parasite.wormbase.org")
     genes <- getBM(mart = mart, 
-                   filters = c("species_id_1010", "with_celegans_eg_homologue"),
+                   filters = c("species_id_1010", "only_elegaprjna13758_homologue"),
                    value = list("prjea36577", TRUE),
-                   attributes = c("ensembl_gene_id", "celegans_eg_gene"))
+                   attributes = c("wbps_gene_id", "elegaprjna13758_gene", "elegaprjna13758_gene_name"))
     head(genes)</pre>
 </p>
 
