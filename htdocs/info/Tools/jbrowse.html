@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>JBrowse</title>
+</head>
+
+<body>
+  
+<h2>Using JBrowse displays</h2>
+<p><h3>Table of Contents</h3></p>
+<ol>
+<ul><a href="#toc1">Introduction</a></ul>
+<ul><a href="#toc2">Accessing JBrowse</a></ul>
+<ul><a href="#toc3">Basic usage</a></ul>
+<ul><a href="#toc4">RNASeq tracks</a></ul>
+</ol>
+
+
+<p><h3 id="toc1">Introduction</h3></p>
+<p><a href="http://jbrowse.org/">JBrowse</a> is a fast modern genome browser that we offer as an alternative to the classic Ensembl genome browser:</p>
+<p><img src="/img/jbrowse_dust.png" alt="JBrowse genes and repeats zoomed out" class="image-expand" style="width:400px;"></p>
+
+<p><h3 id="toc2">Accessing JBrowse</h3></p>
+<p><img src="/i/96/region.png"></p>
+<p>
+You can navigate to the regions in JBrowse:
+<ul>
+  <li>from a species page, under "Navigation"</li>
+  <li>from gene/transcript/protein etc. pages, through a "view region in JBrowse" link in the upper right corner</li>
+</ul>
+</p>
+<p><h3 id="toc3">Basic usage</h3></p>
+
+<p>
+         <h4>Moving</h4>
+            <ul>
+               <li>Move the view by clicking and dragging in the track area, or by clicking left or right arrow in the navigation bar, or by pressing the left and right arrow keys.</li>
+               <li>Center the view at a point by clicking on either the track scale bar or overview bar, or by shift-clicking in the track area.</li>
+            </ul>
+         <h4>Zooming</h4>
+            <ul>
+               <li>Zoom in and out by clicking plus or minus symbols in the navigation bar, or by pressing the up and down arrow keys while holding down "shift".</li>
+               <li>Select a region and zoom to it ("rubber-band" zoom) by clicking and dragging in the overview or track scale bar, or shift-clicking and dragging in the track area.</li>
+            </ul>
+         <h4>Showing Tracks</h4>
+            <ul>
+               <li>Turn a track on by dragging its track label from the "Available Tracks" area into the genome area, or double-clicking it.</li>
+               <li>Turn a track off by dragging its track label from the genome area back into the "Available Tracks" area.</li>
+            </ul>
+      </dl>
+         <h4>Searching</h4>
+            <ul>
+               <li>Jump to a feature or reference sequence by typing its name in the location box and pressing Enter.</li>
+               <li>Jump to a specific region by typing the region into the location box as: <span>ref:start..end</span>.</li>
+            </ul>
+         <h4>Example Searches</h4>
+            <dl>
+               <h5>WBGene0001324</h5>
+               <dd>jumps to the gene <span>WBGene0001324</span>.</dd>
+               <h5>chr4</h5>
+               <dd>jumps to chromosome 4</dd>
+               <h5>chr4:79,500,000..80,000,000</h5>
+               <dd>jumps the region on chromosome 4 between 79.5Mb and 80Mb.</dd>
+               <h5>5678</h5>
+               <dd>centers the display at base 5,678 on the current sequence</dd>
+            </dl>
+</p>
+
+
+<p><h3 id="toc4">RNASeq tracks</h3></p>
+
+<p>We collaborate with <a href="https://www.ebi.ac.uk/fg/rnaseq/api/">the RNASeq-er project</a> ran by the Functional Genomics Group at the European Bioinformatics Institute. <br>
+RNASeqer retrieves public RNASeq reads of Nematoda and Platyhelminthes deposited to <a href="https://www.ebi.ac.uk/ena">European Nucleotide Archive</a> and aligns them to WormBase ParaSite genomes. We import the alignment results, retrieve additional metadata, and integrate the data into our per-species JBrowse displays.</p>
+
+Here is a display with two RNASeq tracks enabled, picked from the "select tracks" menu available under the highlighted button:
+<p><img src="/img/jbrowse_two_tracks.png" alt="JBrowse two tracks and track selector highlighted" class="image-expand" style="width:400px;"></p>
+<p><i>About this track</i> in the track label menu is full of useful information about the RNASeq tracks:
+         <ul>
+            <li>All metadata available for the track</li>
+            <li>Links to ENA study page and other resources where available</li>
+            <li>Link to FTP location with data files: QC, quantification, and more</li>
+         </ul>
+</p>
+
+This is the "select tracks menu":
+<p><img src="/img/jbrowse_facets.png" alt="JBrowse select tracks" class="image-expand" style="width:400px;"></p>
+<p> It consists of selection facets on the left, and a central grid. </p>
+
+<p>The facets aggregate the runs by study, provide additional context about data quality, and organise them through several categories of metadata. The grid focuses on the metadata, and the track displays. </p>
+
+<p> There are frequently too many tracks to view at once. <br>Select runs in the study you need, or pick several runs with good library size across several studies with good metadata.</p>
+
+<p> It can also be helpful to search for keywords, and use a combination of choices across facets to narrow down your selection. </p> 
+
+</body>
+</html>
