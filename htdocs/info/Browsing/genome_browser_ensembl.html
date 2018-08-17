@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Genome Browser (Ensembl)</title>
+</head>
+
+<body>
+<h2>Genome Browser (Ensembl)</h2>
+
+<p>Our main genome browser - a tool enabling an interactive view of the genome - comes from Ensembl. It lets you view features of a chosen region, usually a selected gene.</p>
+
+<p><img src="/img/region_in_detail.png" alt="Location view" class="image-expand" style="width:400px;"></p>
+
+<h3>Whole scaffold/contig view</h3>
+<p>The top image shows the full scaffold or contig, with the location being displayed in detail highlighted by a red box. The selected area can be changed by clicking on the scaffold. This brings up a menu that allows the selected area to be re-centered or to zoom in or out. Alternatively you can select and drag to choose a new area of the scaffold or contig.</p>
+
+<h3>Region in detail</h3>
+<p>The second panel shows a zoomed-in view centered on the selected gene. The control panel underneath allows you to jump to a particular location or gene by entering them in each of the boxes on the left and clicking 'GO'.</p>
+
+<p>On the right there is a control which allows you to scroll along the scaffold or contig by clicking the left or right arrows. The single arrow scrolls you along by a window width and the double arrow scrolls along 1MB. Alternatively, you can scroll by clicking and dragging the region in detail image. You can zoom in and out using the + and - , or by dragging the slider to the desired location.</p>
+<h3>Provided tracks</h3>
+<p>For all our genomes, we display gene models and a number of tertiary annotation features.</p>
+<h4>Predicted non-coding RNA (ncRNA)</h4>
+<p><img src="/img/ncRNA_1.png" alt="ncRNA tracks" class="image-expand" style="width:400px;"></p>
+
+<p>Clicking the ncRNA name brings up a window providing additional metadata about the ncRNA, and an option to view other hits on the genome:</p>
+
+<p><img src="/img/ncRNA_2.png" alt="ncRNA metadata" class="image-expand" style="width:400px;"></p>
+
+<h4>RNASeq tracks</h4>
+<p>We collaborate with <a href="https://www.ebi.ac.uk/fg/rnaseq/api/">the RNASeq-er project</a> ran by the Functional Genomics Group at the European Bioinformatics Institute. <br>
+RNASeq-er retrieves public RNASeq reads of Nematoda and Platyhelminthes deposited to <a href="https://www.ebi.ac.uk/ena">European Nucleotide Archive</a> and aligns them to WormBase ParaSite genomes. We import the alignment results, retrieve additional metadata, and add the tracks where available. The data is also viewable in <a href="genome_browser_jbrowse.html">our alternative genome browser based on JBrowse</a>.</p>
+<p>The tracks are sorted by ENA study accession:
+<p><img src="/img/genome_browser_rnaseq_menu.png" alt ="Genome browser menu, tracks for RNASeq study"></p>
+<p>After selecting a track it appears in the genome view.</p>
+<p>Hovering over the short track name to the left of the track brings up a window providing additional metadata about the track, and options to configure the track:</p>
+
+<p><img src="/img/RNASeq_metadata.png" alt="RNASeq metadata" class="image-expand" style="width:400px;"></p>
+<h4>Hosted hubs</h4>
+<p>For some species - e.g. <a href="/Ascaris_suum_prjna62057">Ascaris suum (PRJNA62057)</a> - we link externally provided hubs. Do contact us if you have a dataset that you think the community would consider valuable to include in this way. </p>
+<h4>Adding own tracks</h4>
+<p>You can add your own tracks to the display. Please see <a href="/info/Browsing/Upload/index.html">this page</a> for more details. </p>
+</body>
+</html>
