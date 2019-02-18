@@ -1,0 +1,41 @@
+
+<html>
+<head>
+<title>g:Profiler</title>
+</head>
+<body>
+          
+<h1>g:Profiler (Gene set enrichment)</h1>
+
+<p>
+We are collaborating with <a href="https://biit.cs.ut.ee/gprofiler">g:Profiler</a> at the University of Tartu, Estonia. WormBase ParaSite genomes and the results of our functional analysis annotation are processed by g:Profiler to offer gene set enrichment analysis as a service.
+<br>
+You can try it <a href="https://biit.cs.ut.ee/gprofiler/gost">here</a>. Enter a list of genes of interest into the web interface, and see if any of the associated GO terms are overrepresented.
+</p>
+<h2>About gene set enrichment</h2>
+Genes can be tied to involvement in a certain cellular component, biological process or molecular function via functional analysis methods. These ties are presented in WormBase ParaSite as Gene Ontology (GO) terms, and they are available on gene pages and through BioMart. Using this data is not, however, as simple as retrieving a list, due to imperfection of methods involved to make the predictions. There are some false positives when assigning function to genes, which obscure the biological meaning when looking at any single gene. Gene set enrichment analysis is a method of extracting the true positive associations through combining results from multiple genes at a time.
+<br>
+Suppose we have a list of genes that we suspect to share a function or to all be involved in the same process. Perhaps they are results in a differential expression experiment, or we observed that mutation in each of them is linked to a particular phenotype in a population. To capture this effect as a combination of GO terms, we may look for <i>enrichment</i> - that is, terms that occur as associations to our list much more often than they would occur in a random list. This is done by comparing occurence of terms in our list to a null model: how often we would expect a GO term to occur in a randomly chosen list of genes.
+
+<h3> Example </h3>
+<a href="https://www.ncbi.nlm.nih.gov/pubmed/29368659">Radio et al. (2018)</a> sequenced RNA of South American strains of <i>Fasciola hepatica</i>, differing by their suseptibility to drugs triclabendazole and albendazole. Gene expression analysis yielded a list of differentially regulated genes between a resistant and suseptible strain of <i>Fasciola</i>. Enrichment analysis with molecular function GO terms revealed several terms related to cytoskeleton structure and function, contributing a piece of evidence towards explaining how the antihelminthics affect the parasites.
+
+<h2>Gene Ontology terms</h2>
+GO is a consortium that maintains three sub-ontologies of terms:
+<ul>
+<li> Cellular component </li>
+<li> Biological process </li>
+<li> Molecular function </li>
+</ul>
+Gene products of model organisms receive active curation of GO terms, with individual pieces of research supporting each association. For WormBase ParaSite genomes this is usually not the case: thus we offer mostly computational predictions.
+<br>
+Even for a species that has not been sequenced before, these predictions will still carry biological meaning. All life on our planet, in its fantastic complexity, shares a set of fundamental mechanisms and basic processes, and insights gained from studying model species can be transferred elsewhere.
+<h2> Sources of GO annotations for WormBase ParaSite</h2>
+You can tell the mechanism of each association by looking at its <a href="http://geneontology.org/docs/guide-go-evidence-codes/">evidence code</a>. The most common code for our data is IEA, standing for Inferred from Electronic Annotation.
+<br>
+Our main source of Gene Ontology terms is through their annotation to protein domains. We obtain it by running InterProScan, a prediction tool that assigns protein domains to gene products, and transitively, GO annotations. These annotations carry the evidence code IEA.
+<br>
+We also import annotations from UniProt, via sequence match of UniProt protein records with translations of our gene models. This is also the main source of gene descriptions - as they are based on function of corresponding proteins, we do not endeavour to assign them ourselves. UniProt obtains the GO annotations through several means, as indicated by the annotation evidence code(not IEA).
+
+</body>
+</html>
