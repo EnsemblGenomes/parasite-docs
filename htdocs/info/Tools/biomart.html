@@ -185,9 +185,9 @@
     library(biomaRt)
     mart <- useMart("parasite_mart", dataset = "wbps_gene", host = "https://parasite.wormbase.org", port = 443)
     genes <- getBM(mart = mart, 
-                   filters = c("species_id_1010", "only_elegaprjna13758_homologue"),
-                   value = list("mansoprjea36577", TRUE),
-                   attributes = c("wbps_gene_id", "elegaprjna13758_gene", "elegaprjna13758_gene_name"))
+               filters = c("species_id_1010", "only_caelegprjna13758_homologue"),
+               value = list("scmansprjea36577", TRUE),
+               attributes = c("wbps_gene_id", "caelegprjna13758_gene", "caelegprjna13758_gene_name"))
     head(genes)</pre>
 </p>
 
